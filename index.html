@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+            know = {
+                "hello" : "hi",
+                "whats up" : "great",
+                "how are you?" : "good",
+                "ok" : ":)"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                document.getElementById("chatLog").style.backgroundColor = "yellow";
+               
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                    document.getElementById("chatLog").style.Color = "pink";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I can refer you to the best person for your answer. kindly call on 789456123, or email on gsjhgjd@gmail.com <br>";
+                    
+                }
+            } 
+        </script>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("hey");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+
+    </head> 
+    <body>
+        <div id="h">
+            <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="..." height="60px" width="40px" onclick="myFunction()">   
+        </div>
+
+        <div id="hey"> 
+
+        <p id="chatLog">- - C H A T - -<br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+        </div>
+    </body>
+</html>
